@@ -11,3 +11,227 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.container{
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+
+.header-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header-container .btn{
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+.header-container .btn .mode{
+  width: 20px;
+  border-radius: 30px;
+  background-color: rgb(255, 255, 255);
+  cursor: pointer;
+  height: 12px;
+  position: relative;
+  border: 1px solid black;
+  z-index: 1;
+  margin-left: 5px;
+}
+.dark-container{
+  background-color: black;
+  color: white;
+  min-height: 100vh;
+}
+.header-container .btn .dark{
+    width: 20px;
+    border-radius: 30px;
+    background-color: rgb(0, 0, 0);
+    cursor: pointer;
+    height: 12px;
+    position: relative;
+    border: 1px solid rgb(255, 255, 255);
+    z-index: 1;
+    margin-left: 5px;
+}
+.header-container .btn .dark::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 12px;
+    background-color: white;
+    border-radius: 50%;
+    right: 0;
+    z-index: 999;
+}
+.header-container .btn .title{
+  font-size: 15px;
+  text-align: center;
+}
+.header-container .btn .mode::after{
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 12px;
+  background-color: #070707;
+  border-radius: 50%;
+  left: 0;
+  z-index: 999;
+}
+
+.search{
+  display: flex;
+  align-items: center;
+  padding: 3px;
+  border-radius: 3px;
+  background-color: rgb(230, 228, 228);
+  font-size: 12px;
+  margin-bottom: 15px;
+}
+.search i{
+  color: rgb(82, 80, 80);
+}
+.search input{
+  background-color: rgb(230, 228, 228);
+  border: none;
+  margin-left: 4px;
+  flex: 1;
+}
+.search input:focus{
+  outline: none;
+}
+
+.container .note-list{
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+
+}
+.container .note{
+  background: #fef68a;
+  border-radius: 10px;
+  min-height: 170px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+  word-break: break-all;
+  white-space: pre-wrap;
+}
+.container .note .footer-note i{
+  cursor: pointer;
+  transition: .1s;
+}
+.container .note .footer-note i:hover{
+color: red;
+}
+.container .note.new{
+  background-color: #67d7cc;
+}
+.container .note.new .footer-note{
+  align-items: center;
+}
+.container .note.new .footer-note small{
+  font-size: 10px;
+  font-weight: 500;
+}
+/* dark new note */
+
+.container .dark-new-note {
+    background-color: #67d7cc;
+    color: black;
+    border-radius: 10px;
+    min-height: 170px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    word-break: break-all;
+    white-space: pre-wrap;
+}
+
+.container .dark-new-note .footer-note {
+  align-items: center;
+}
+
+.container .dark-new-note .footer-note small {
+  font-size: 10px;
+  font-weight: 500;
+}
+.container .dark-new-note .btn {
+  background-color: antiquewhite;
+  padding: 3px 10px;
+  border-radius: 10px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.container .dark-new-note .btn:hover {
+  background-color: #fadbc8;
+}
+
+.container .dark-new-note .footer-note {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 10px;
+  font-weight: 500;
+}
+
+/* dark new note */
+
+textarea{
+  background-color: #67d7cc;
+  border: none;
+  resize: none;
+}
+textarea:focus{
+  outline: none;
+}
+.container .note.new .btn{
+  background-color: antiquewhite;
+  padding: 3px 10px;
+  border-radius: 10px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: .3s;
+}
+.container .note.new .btn:hover{
+  background-color: #fadbc8;
+}
+.container .note .footer-note{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 10px;
+  font-weight: 500;
+}
+.container .dark-note{
+  background: #fef68a;
+  border-radius: 10px;
+  min-height: 170px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+  word-break: break-all;
+  white-space: pre-wrap;
+  color: black;
+}
+.container .dark-note .footer-note i {
+  cursor: pointer;
+  transition: .1s;
+}
+
+.container .dark-note .footer-note i:hover {
+  color: red;
+}
+.container .dark-note .footer-note {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 10px;
+  font-weight: 500;
+}
